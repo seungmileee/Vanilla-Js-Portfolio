@@ -292,7 +292,7 @@ p {
 
 .skill__value {
   height: 3px;
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-pink);
 }
 
 .skillset__right {
@@ -309,7 +309,9 @@ p {
 }
 
 /* Work */
-
+#work {
+  background-color: var(--color-beige);
+}
 .work__categories {
   margin: 40px;
 }
