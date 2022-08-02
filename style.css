@@ -7,6 +7,7 @@
   --color-pink: #fe918d;
   --color-beige: #fff6f6;
   --color-dark-pink: #ff6863;
+  --color-red-pink: #ff3d3a;
   --color-black: #4d4d4d;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
@@ -97,10 +98,18 @@ p {
 /* Navbar */
 #navbar {
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  background-color: var(--color-pink);
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar_dark {
+  background-color: var(--color-dark-pink);
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -134,7 +143,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-pink);
   border-radius: var(--size-border-radius);
 }
 
@@ -151,6 +160,7 @@ p {
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 
