@@ -30,11 +30,26 @@ contactBtn.addEventListener("click", (e) => {
   scrollIntoView("#contact");
 });
 
-// 스크롤 내릴 때 홈 섹션 점점 더 투명해지도록 만들기
+// 스크롤 내릴 때 홈 섹션 내용 점점 더 투명해지도록 만들기
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// 스크롤 시 arrow up 버튼 보이게 만들기
+const arrow_up = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrow_up.classList.add("visible");
+  } else {
+    arrow_up.classList.remove("visible");
+  }
+});
+
+// arrow up 버튼 클릭 시 홈 버튼으로 올라가기
+arrow_up.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
 
 function scrollIntoView(selector) {
