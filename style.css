@@ -102,14 +102,15 @@ p {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 1px;
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar_dark {
   background-color: var(--color-dark-pink);
-  padding: 8px;
+  padding: 2px;
 }
 
 .navbar__logo {
@@ -159,9 +160,13 @@ p {
 /* Home */
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
-  padding: 40px;
+  padding: 20px;
   padding-top: 100px;
   text-align: center;
+}
+
+.home_trans {
+  opacity: 60%;
 }
 
 .home__avatar {
@@ -202,7 +207,7 @@ p {
 #about {
   background-color: var(--color-beige);
   margin: auto;
-  padding: 50px 200px;
+  padding: 20px 200px;
   text-align: center;
 }
 .about__majors {
