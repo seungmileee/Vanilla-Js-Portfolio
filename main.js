@@ -52,6 +52,26 @@ arrow_up.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
+// 버튼 누르면 filter 동작하게 만들기
+const work_btn = document.querySelector(".work__categories");
+const work_project = document.querySelector(".work__projects");
+const work_proj = document.querySelectorAll(".project");
+console.log(work_proj);
+
+work_btn.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter === null) {
+    return;
+  }
+  work_proj.forEach((el) => {
+    if (filter === "*" || filter == el.dataset.type) {
+      el.classList.remove("none");
+    } else {
+      el.classList.add("none");
+    }
+  });
+});
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
