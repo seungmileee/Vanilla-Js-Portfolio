@@ -3,12 +3,17 @@
 //스크롤 시 네비게이션 바 색 변경
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener("scroll", () => {
+document.addEventListener("scroll", (e) => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar_dark");
   } else {
     navbar.classList.remove("navbar_dark");
   }
+});
+
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+toggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // 네비게이션 바 버튼, 컨택 미 버튼 누를 때 해당 요소로 스크롤
@@ -21,6 +26,7 @@ navbarMenu.addEventListener("click", (e) => {
   if (!link) {
     return;
   }
+  navbar.classList.remove("open");
   scrollIntoView(link);
 });
 
@@ -63,16 +69,56 @@ work_btn.addEventListener("click", (e) => {
   if (filter === null) {
     return;
   }
-  work_proj.forEach((el) => {
-    if (filter === "*" || filter == el.dataset.type) {
-      el.classList.remove("none");
-    } else {
-      el.classList.add("none");
-    }
-  });
+
+  const target = (e.target.nodeName = "BUTTON"
+    ? e.target
+    : e.target.parentNode);
+  target.classList.remove("selected");
+  target.classList.add("selected");
+
+  work_project.classList.add("anime-out");
+  setTimeout(() => {
+    work_proj.forEach((el) => {
+      if (filter === "*" || filter == el.dataset.type) {
+        el.classList.remove("none");
+      } else {
+        el.classList.add("none");
+      }
+    });
+
+    work_project.classList.remove("anime-out");
+  }, 300);
 });
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+const sectionId = [
+  "#home",
+  "#about",
+  "#skills",
+  "#work",
+  "#testimonials",
+  "#contact",
+].map((id) => document.querySelector(id));
+
+const navItems = sectionId.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    console.log(entry.target);
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sectionId.forEach((section) => observer.observe(section));
