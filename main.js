@@ -22,12 +22,14 @@ const navbarMenu = document.querySelector(".navbar__menu");
 
 navbarMenu.addEventListener("click", (e) => {
   const target = e.target;
+  console.log(target);
   const link = target.dataset.link;
   if (!link) {
     return;
   }
   navbar.classList.remove("open");
   scrollIntoView(link);
+  selectNavItem(target);
 });
 
 const contactBtn = document.querySelector(".home__contact");
@@ -90,11 +92,6 @@ work_btn.addEventListener("click", (e) => {
   }, 300);
 });
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
-
 const sectionId = [
   "#home",
   "#about",
@@ -102,11 +99,27 @@ const sectionId = [
   "#work",
   "#testimonials",
   "#contact",
-].map((id) => document.querySelector(id));
+];
+const sections = sectionId.map((id) => document.querySelector(id));
 
 const navItems = sectionId.map((id) =>
   document.querySelector(`[data-link="${id}"]`)
 );
+
+let selectedNavIndex = 0;
+
+let selectedNavItems = navItems[0];
+function selectNavItem(selected) {
+  selectedNavItems.classList.remove("active");
+  selectedNavItems = selected;
+  selectedNavItems.classList.add("active");
+}
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionId.indexOf(selector)]);
+}
 
 const observerOptions = {
   root: null,
@@ -116,9 +129,31 @@ const observerOptions = {
 
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
-    console.log(entry.target);
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      console.log(entry.target.id);
+      const index = sectionId.indexOf(`#${entry.target.id}`);
+      console.log(index, entry.target.id);
+
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
   });
 };
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
-sectionId.forEach((section) => observer.observe(section));
+sections.forEach((section) => observer.observe(section));
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) ===
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});

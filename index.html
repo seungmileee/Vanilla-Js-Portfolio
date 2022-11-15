@@ -1,190 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seungmi's Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio for world-renowned software engineer Ellie"
-    />
-    <meta name="author" content="Ellie"  />
-    <script src="https://kit.fontawesome.com/b5715ce5a4.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">                                                         
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <img
-        src="./imgs/favicon.png" class="my_logo"
-     /> 
-        <a href="#">Seungmi</a>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#about" id="setAbout">About</li>
-        <li class="navbar__menu__item" data-link="#skills" >Skills</li>
-        <li class="navbar__menu__item" data-link="#work" >My work</li>
-        <li class="navbar__menu__item" data-link="#testimonials" >Testimonial</li>
-        <li class="navbar__menu__item" data-link="#contact" >Contact</li>
-      </ul>
-      <!-- Toggle button -->
-      <button class="navbar__toggle-btn">
-        <i class="fas fa-bars"  id="contactBtn"></i>
-      </button>
-    </nav>
 
-    <!-- Home -->
-    <section id="home">
-      <div class="home__container">
-        <img
-          src="imgs/profile.jpg"
-          alt="Ellie's profile photo"
-          class="home__avatar"/> 
-        <h1 class="home__title">Hello, <br />I'm Seungmi Lee</h1>
-        <h2 class="home__description">
-         A Software Engineer
-        </h2>
-        <button class="home__contact" data-link="#contact">Contact Me</button>
-      </div>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seungmi's Portfolio</title>
+  <meta name="description" content="Portfolio for world-renowned software engineer Ellie" />
+  <meta name="author" content="Ellie" />
+  <script src="https://kit.fontawesome.com/b5715ce5a4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&family=Open+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="./imgs/favicon.png" />
+</head>
 
-    <!-- About -->
-    <section id="about" >
-      <h1>About me</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure possimus
-        rem sequi? Nihil, est impedit dignissimos consequatur totam, odit
-        deserunt doloremque laudantium similique corrupti, iusto optio rerum in
-        deleniti officia.
-      </p>
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__icon">
-            <i class="fa-brands fa-html5"></i>
-          </div>
-          <h2 class="major__title">HTML, CSS</h2>
-          <div class="major__description">
-            HTML, CSS
-          </div>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <img src="./imgs/favicon.png" class="my_logo" />
+      <a href="#">Seungmi</a>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item active" data-link="#home">Home</li>
+      <li class="navbar__menu__item" data-link="#about" id="setAbout">About</li>
+      <li class="navbar__menu__item" data-link="#skills">Skills</li>
+      <li class="navbar__menu__item" data-link="#work">My work</li>
+      <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+      <li class="navbar__menu__item" data-link="#contact">Contact</li>
+    </ul>
+    <!-- Toggle button -->
+    <button class="navbar__toggle-btn">
+      <i class="fas fa-bars" id="contactBtn"></i>
+    </button>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="home__container">
+      <img src="imgs/profile.jpg" alt="Ellie's profile photo" class="home__avatar" />
+      <h1 class="home__title">Hello, <br />I'm Seungmi Lee</h1>
+      <h2 class="home__description">
+        A Software Engineer
+      </h2>
+      <button class="home__contact" data-link="#contact">Contact Me</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h1>About me</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure possimus
+      rem sequi? Nihil, est impedit dignissimos consequatur totam, odit
+      deserunt doloremque laudantium similique corrupti, iusto optio rerum in
+      deleniti officia.
+    </p>
+    <div class="about__majors">
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-brands fa-html5"></i>
         </div>
-        <div class="major">
-          <div class="major__icon">
-            <i class="fa-brands fa-js"></i>
-          </div>
-          <h2 class="major__title">Javascript</h2>
-          <p class="major__description">
-            Javascript
-          </p>
-        </div>
-        <div class="major">
-          <div class="major__icon">
-            <i class="fa-brands fa-react"></i>
-          </div>
-          <h2 class="major__title">React</h2>
-          <p class="major__description">
-           React
-          </p>
+        <h2 class="major__title">HTML, CSS</h2>
+        <div class="major__description">
+          HTML, CSS
         </div>
       </div>
-      <div class="about__jobs">
-        <div class="job">
-          <img
-            src="imgs/codestates.png"
-            alt="codestates"
-            class="job__logo"
-          />
-         <div class="job__description">
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-brands fa-js"></i>
+        </div>
+        <h2 class="major__title">Javascript</h2>
+        <p class="major__description">
+          Javascript
+        </p>
+      </div>
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-brands fa-react"></i>
+        </div>
+        <h2 class="major__title">React</h2>
+        <p class="major__description">
+          React
+        </p>
+      </div>
+    </div>
+    <div class="about__jobs">
+      <div class="job">
+        <img src="imgs/codestates.png" alt="codestates" class="job__logo" />
+        <div class="job__description">
           <p class="job__name">
             Currently completed CodeStates bootcamp
           </p>
           <p class="job__period">2022 4.25 ~ 10.19</p>
-         </div>
         </div>
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section__container">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-          Experience with all phases of the software life-cycle. Passion for
-          learning new technologies. Capable of working within a team environment
-          and independently. Ability to plan and time schedule, work under strict
-          time pressure and adapt quickly when needed.
-        </p>
-        <div class="skillset">
-          <div class="skillset__left">
-            <h3 class="skillset__title">Skills</h3>
-            <div class="skill">
-              <div class="skill__description">
-                <span>HTML</span>
-                <span>70%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 70%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>CSS</span>
-                <span>60%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 60%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>JavaScript</span>
-                <span>60%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 60%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>React</span>
-                <span>65%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 65%;"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skillset__right">
-            <div class="tools">
-              <h3 class="skillset__title">Tools</h3>
-              <ul class="tools__list">
-                <li><span>Visual Studio Code</span></li>
-                <li><span>Figma</span></li>
-              </ul>
-            </div>
-            <div class="etc">
-              <h3 class="skillset__title">Etc</h3>
-              <ul class="etc__list">
-                <li><span>Git</span></li>
-              </ul>
-            </div>
-          </div>
       </div>
-    </section>
+  </section>
 
-    <!-- Work -->
-    <section id="work" class="section">
-     <div class="section__container">
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="section__container">
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <p>
+        Experience with all phases of the software life-cycle. Passion for
+        learning new technologies. Capable of working within a team environment
+        and independently. Ability to plan and time schedule, work under strict
+        time pressure and adapt quickly when needed.
+      </p>
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3 class="skillset__title">Skills</h3>
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>70%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>CSS</span>
+              <span>60%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>JavaScript</span>
+              <span>60%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>React</span>
+              <span>65%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 65%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skillset__right">
+          <div class="tools">
+            <h3 class="skillset__title">Tools</h3>
+            <ul class="tools__list">
+              <li><span>Visual Studio Code</span></li>
+              <li><span>Figma</span></li>
+            </ul>
+          </div>
+          <div class="etc">
+            <h3 class="skillset__title">Etc</h3>
+            <ul class="etc__list">
+              <li><span>Git</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="section">
+    <div class="section__container">
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -210,28 +199,15 @@
             <span>Clone coding with HTML, CSS</span>
           </div>
         </a>
-        <a
-          href="https://github.com/dream-ellie/responsive-nav-bar"
-          class="project"
-          data-type="react"
-          target="blank"
-        >
-          <img
-            class="project__img"
-            src="imgs/바넬로피.jpg"
-            alt="navbar"
-          />
+        <a href="https://github.com/dream-ellie/responsive-nav-bar" class="project" data-type="react" target="blank">
+          <img class="project__img" src="imgs/바넬로피.jpg" alt="navbar" />
           <div class="project__description">
             <h3>Responsive Navbar</h3>
             <span>HTML, CSS with media query</span>
           </div>
         </a>
-        <a
-          href="https://github.com/dream-ellie/responsive-nav-bar"
-          class="project"
-          data-type="javascript"
-          target="blank"
-        >
+        <a href="https://github.com/dream-ellie/responsive-nav-bar" class="project" data-type="javascript"
+          target="blank">
           <img class="project__img" src="imgs/바넬로피.jpg" alt="navbar" />
           <div class="project__description">
             <h3>Shopping mall game</h3>
@@ -274,72 +250,65 @@
           </div>
         </a>
       </div>
-     </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-   <div class="section__container">
-    <h1>Testimonials</h1>
-    <h3>See what they say about me</h3>
-    <div class="testimonials">
-      <div class="testimonial">
-        <img
-        src="imgs/바넬로피.jpg"
-          alt="People"
-          class="testimonial__avatar"
-        />
-        <div class="testimonial__speech-bubble">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            fuga libero nulla eveniet aperiam laborum, quis provident
-            quibusdam officiis reprehenderit, placeat neque perspiciatis vero
-            explicabo tempora, dignissimos accusantium inventore ducimus!
-          </p>
-          <p class="name"><a href="">Ellie</a> / Samsung</p>
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="section__container">
+      <h1>Testimonials</h1>
+      <h3>See what they say about me</h3>
+      <div class="testimonials">
+        <div class="testimonial">
+          <img src="imgs/바넬로피.jpg" alt="People" class="testimonial__avatar" />
+          <div class="testimonial__speech-bubble">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              fuga libero nulla eveniet aperiam laborum, quis provident
+              quibusdam officiis reprehenderit, placeat neque perspiciatis vero
+              explicabo tempora, dignissimos accusantium inventore ducimus!
+            </p>
+            <p class="name"><a href="">Ellie</a> / Samsung</p>
+          </div>
         </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__speech-bubble">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            fuga libero nulla eveniet aperiam laborum, quis provident
-            quibusdam officiis reprehenderit, placeat neque perspiciatis vero
-            explicabo tempora, dignissimos accusantium inventore ducimus!
-          </p>
-          <p class="name"><a href="">Ellie</a> / Samsung</p>
+        <div class="testimonial">
+          <div class="testimonial__speech-bubble">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              fuga libero nulla eveniet aperiam laborum, quis provident
+              quibusdam officiis reprehenderit, placeat neque perspiciatis vero
+              explicabo tempora, dignissimos accusantium inventore ducimus!
+            </p>
+            <p class="name"><a href="">Ellie</a> / Samsung</p>
+          </div>
+          <img src="imgs/바넬로피.jpg" alt="People" class="testimonial__avatar" />
         </div>
-        <img
-        src="imgs/바넬로피.jpg"
-        alt="People"
-        class="testimonial__avatar"
-      />
       </div>
     </div>
-   </div>
-    </section>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h1 class="contact__title">Let's talk</h1>
-      <h2 class="contact__email">dltmdal0928@gmail.com</h2>
-      <div class="contact__links">
-        <a href="https://github.com/seungmileee?tab=repositories" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i class="fa fa-linkedin-square"></i>
-        </a>
-      </div>
-      <p class="contact__rights">
-        2022 seungmi - All rights reserved
-      </p>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h1 class="contact__title">Let's talk</h1>
+    <h2 class="contact__email">dltmdal0928@gmail.com</h2>
+    <div class="contact__links">
+      <a href="https://github.com/seungmileee?tab=repositories" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="#" target="_blank">
+        <i class="fa fa-linkedin-square"></i>
+      </a>
+    </div>
+    <p class="contact__rights">
+      2022 seungmi - All rights reserved
+    </p>
+  </section>
 
-    <!-- Arrow up -->
-    <button class="arrow-up">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-  </body>
-  <script src="main.js"></script>
+  <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</body>
+<script src="main.js"></script>
+
 </html>
